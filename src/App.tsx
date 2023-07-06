@@ -18,8 +18,8 @@ import FirstAid from "./components/FirstAid/FirstAid";
 import DoctorList from "./components/Doctors/DoctorList";
 import DoctorsRegistration from "./pages/Registration/DoctorsRegistration";
 import ArticleList from "./components/Articles/ArticleList";
-import { AdminAuth, AuthRoute } from "./components/RouteProtection/Auth";
-import OTPAuthRoute from "./components/RouteProtection/OTPAuth";
+// import { AdminAuth, AuthRoute } from "./components/RouteProtection/Auth";
+// import OTPAuthRoute from "./components/RouteProtection/OTPAuth";
 import DoctorSuccess from "./pages/Registration/DoctorSuccess";
 import ErrorPage from "./pages/ErrorPage";
 
@@ -36,9 +36,9 @@ function App() {
           <Route
             path="/verify"
             element={
-              <OTPAuthRoute>
-                <AccountVerification />
-              </OTPAuthRoute>
+              // <OTPAuthRoute>
+              <AccountVerification />
+              // </OTPAuthRoute>
             }
           />
           <Route path="/forgot-password" element={<Forgot />} />
@@ -46,91 +46,91 @@ function App() {
           <Route
             path="/reset-password"
             element={
-              <OTPAuthRoute>
-                <ResetPassword />
-              </OTPAuthRoute>
+              // <OTPAuthRoute>
+              <ResetPassword />
+              // </OTPAuthRoute>
             }
           />
           <Route
             path="/otp"
             element={
-              <OTPAuthRoute>
-                <OTPPage />
-              </OTPAuthRoute>
+              // <OTPAuthRoute>
+              <OTPPage />
+              // </OTPAuthRoute>
             }
           />
           <Route
             path="/success"
             element={
-              <OTPAuthRoute>
-                <PasswordResetSuccess />
-              </OTPAuthRoute>
+              // <OTPAuthRoute>
+              <PasswordResetSuccess />
+              // </OTPAuthRoute>
             }
           />
           <Route
             path="/dashboard"
             element={
-              <AuthRoute>
-                <>
-                  <Sidebar />
-                  <HomePage />
-                </>
-              </AuthRoute>
+              // <AuthRoute>
+              <>
+                <Sidebar />
+                <HomePage />
+              </>
+              // </AuthRoute>
             }
           />
           <Route
             path="/askdoctor"
             element={
-              <AuthRoute>
-                <>
-                  <Sidebar />
-                  <AskDoctor />
-                </>
-              </AuthRoute>
+              // <AuthRoute>
+              <>
+                <Sidebar />
+                <AskDoctor />
+              </>
+              // </AuthRoute>
             }
           />
           <Route
             path="/findhospital"
             element={
-              <AuthRoute>
-                <>
-                  <Sidebar />
-                  <FindHospital />
-                </>
-              </AuthRoute>
+              // <AuthRoute>
+              <>
+                <Sidebar />
+                <FindHospital />
+              </>
+              // </AuthRoute>
             }
           />
           <Route
             path="/firstaid"
             element={
-              <AuthRoute>
-                <>
-                  <Sidebar />
-                  <FirstAid />
-                </>
-              </AuthRoute>
+              // <AuthRoute>
+              <>
+                <Sidebar />
+                <FirstAid />
+              </>
+              // </AuthRoute>
             }
           />
           <Route
             path="/doctors"
             element={
-              <AdminAuth>
-                <>
-                  <Sidebar />
-                  <DoctorList />
-                </>
-              </AdminAuth>
+              // <AdminAuth>
+              <>
+                <Sidebar />
+                <DoctorList />
+              </>
+              // </AdminAuth>
             }
           />
           <Route
             path="/articles"
             element={
-              <AdminAuth>
-                <>
-                  <Sidebar />
-                  <ArticleList />
-                </>
-              </AdminAuth>
+              // <AdminAuth>
+              <>
+                <Sidebar />
+                <ArticleList />
+              </>
+              // </AdminAuth>
             }
           />
           <Route path="*" element={<ErrorPage />} />
